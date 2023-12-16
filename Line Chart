@@ -19,14 +19,54 @@ url = r"C:\Users\User\Desktop\SQIT3073\GA (Data Frame)\Loan_of_fianancing_approv
 df_2 = pd.read_excel(url, sheet_name=1)
 print(df_2)
 
+df_3 = pd.read_excel(url, sheet_name =2)
+print(df_3)
 # Create a Line Chart for Second Sheet.
 # Define the figure size
-plt.figure(2, figsize=(10,7))
+plt.figure(1, figsize=(10,7))
 
 # Ploting x-axis, y-axis and the title. 
 plt.xlabel('PERIOD', color = 'Black',fontweight = 'bold')
 plt.ylabel('RM in Million', color = 'Black', fontweight = 'bold')
-plt.title('Total Amount of Loans Distribution from 2021 until 2022',loc=('center'),fontsize = 10 , color = 'black', fontweight = 'bold')
+plt.title('Total Amount of Loans Distribution in Different Sector from 2021 until 2022',loc=('left'),fontsize = 10 , color = 'black', fontweight = 'bold')
+
+# Plotting each line. 
+# There are 14 lines
+plt.plot(df_2['Period'], df_2['Agriculture, Forestry and Fishing'],label = 'Agriculture, Forestry and Fishing', linestyle='dashed', color='red', marker='*')
+plt.plot(df_2['Period'], df_2['Mining and Quarrying'],label ='Mining and Quarrying', linestyle='dashed', color='orange', marker='*')
+plt.plot(df_2['Period'], df_2['Manufacturing'],label ='Manufacturing', linestyle='dashed', color='indigo', marker='*')
+plt.plot(df_2['Period'], df_2['Electricity, Gas, Steam and Air Conditioning Supply'],label ='Electricity, Gas, Steam and Air Conditioning Supply', linestyle='dashed', color='violet', marker='*')
+plt.plot(df_2['Period'], df_2['Water Supply, Sewerage, Waste Management and Remediation Activities'],label ='Water Supply, Sewerage, Waste Management and Remediation Activities', linestyle='dashed', color='blue', marker='*')
+plt.plot(df_2['Period'], df_2['Construction'],label ='Construction', linestyle='dashed', color='green', marker='*')
+plt.plot(df_2['Period'], df_2['Wholesale and Retail Trade; Repair of Motor Vehicles and Motorcycles'],label ='Wholesale and Retail Trade; Repair of Motor Vehicles and Motorcycles', linestyle='dashed', color='pink', marker='*')
+plt.plot(df_2['Period'], df_2['Accommodation and Food Service Activities'],label ='Accommodation and Food Service Activities', linestyle='dashed', color='yellow', marker='*')
+plt.plot(df_2['Period'], df_2['Transportation and Storage'],label ='Transportation and Storage', linestyle='dashed', color='grey', marker='*')
+plt.plot(df_2['Period'], df_2['Information and Communication'],label ='Information and Communication', linestyle='dashed', color='brown', marker='*')
+plt.plot(df_2['Period'], df_2['Finance, Insurance, Real Estate and Business Activities'],label ='Finance, Insurance, Real Estate and Business Activities', linestyle='dashed', color='gold', marker='*')
+plt.plot(df_2['Period'], df_2['Education, Health and Others'],label ='Education, Health and Others', linestyle='dashed', color='teal', marker='*')
+plt.plot(df_2['Period'], df_2['Other Sector'],label ='Other Sector', linestyle='dashed', color='crimson', marker='*')
+plt.plot(df_2['Period'], df_2['Household Sector'], label = 'Household Sector', linestyle ='dashed', color = 'cyan', marker ='*')
+
+# label the legend of each line
+plt.legend(loc=(0.81,0.83),fontsize= 5.5)
+
+# Rotate x-axis labels vertically
+plt.xticks(rotation='vertical', fontsize = 5)
+plt.yticks(fontsize = 5 )
+
+# Show the plot
+plt.grid()
+plt.show()
+
+
+# Create a Line Chart for Third Sheet.
+# Define the figure size
+plt.figure(1, figsize=(10,7))
+
+# Ploting x-axis, y-axis and the title. 
+plt.xlabel('PERIOD', color = 'Black',fontweight = 'bold')
+plt.ylabel('RM in Million', color = 'Black', fontweight = 'bold')
+plt.title('Total Amount of Loans Distribution in Different Sector from 2021 until 2022',loc=('left'),fontsize = 10 , color = 'black', fontweight = 'bold')
 
 # Plotting each line. 
 # There are 13 lines
@@ -45,7 +85,7 @@ plt.plot(df_2['Period'], df_2['Education, Health and Others'],label ='Education,
 plt.plot(df_2['Period'], df_2['Other Sector'],label ='Other Sector', linestyle='dashed', color='crimson', marker='*')
 
 # label the legend of each line
-plt.legend(loc=(0.78,0.87),fontsize= 4.8)
+plt.legend(loc=(0.78,0.87),fontsize= 5.5)
 
 # Rotate x-axis labels vertically
 plt.xticks(rotation='vertical', fontsize = 5)
