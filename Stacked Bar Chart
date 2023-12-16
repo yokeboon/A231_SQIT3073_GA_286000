@@ -29,7 +29,7 @@ plt.figure(1, figsize=(10,7))
 # Ploting x-axis, y-axis and the title. 
 plt.xlabel('PERIOD', color = 'Black', fontweight = 'bold')
 plt.ylabel('RM in Million', color = 'Black', fontweight = 'bold')
-plt.title('Total Amount of Loan approved by Each Bank from 2021 until 2022', loc=('center'), color = 'black', fontweight = 'bold')
+plt.title('Total Amount of Loans approved by Each Bank from 2021 until 2022', loc=('center'), color = 'black', fontweight = 'bold')
 
 # Stacked bar chart
 plt.bar(df_1['Period'], df_1['Commercial Banks'], color='blue', label ='Commercial Banks')
