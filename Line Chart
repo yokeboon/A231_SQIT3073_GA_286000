@@ -26,7 +26,7 @@ plt.figure(2, figsize=(10,7))
 # Ploting x-axis, y-axis and the title. 
 plt.xlabel('PERIOD', color = 'Black',fontweight = 'bold')
 plt.ylabel('RM in Million', color = 'Black', fontweight = 'bold')
-plt.title('Total Amount of Loan Distribution from 2021 until 2022',loc=('center'),fontsize = 10 , color = 'black', fontweight = 'bold')
+plt.title('Total Amount of Loans Distribution from 2021 until 2022',loc=('center'),fontsize = 10 , color = 'black', fontweight = 'bold')
 
 # Plotting each line. 
 # There are 13 lines
